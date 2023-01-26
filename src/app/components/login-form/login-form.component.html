@@ -1,0 +1,50 @@
+<div class="form-container">
+  <form [formGroup]="loginForm" class="form" (ngSubmit)="handleSubmit()">
+    <div class="headline">Login</div>
+
+    <div *ngIf="userNameTaken" class="invalid-message">
+      The user name or password is incorrect, please try agian!
+    </div>
+    <input
+      id="name"
+      type="text"
+      class="input-text"
+      placeholder="User Name"
+      formControlName="userName"
+    />
+
+    <div
+      *ngIf="
+        !loginForm.get('userName')?.valid && loginForm.get('userName')?.touched
+      "
+      class="invalid-message"
+    >
+      you must enter a User Name!!
+    </div>
+
+    <input
+      id="password"
+      type="text"
+      class="input-text"
+      placeholder="Password"
+      formControlName="password"
+    />
+
+    <div
+      *ngIf="
+        !loginForm.get('password')?.valid && loginForm.get('password')?.touched
+      "
+      class="invalid-message"
+    >
+      you must enter a Password!!
+    </div>
+
+    <button type="submit" class="button-submit" [disabled]="loginForm.invalid">
+      Submit
+    </button>
+
+    <div>
+      <a routerLink="/register">Not registered yet? click here</a>
+    </div>
+  </form>
+</div>

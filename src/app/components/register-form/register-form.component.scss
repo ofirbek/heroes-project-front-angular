@@ -1,0 +1,81 @@
+* {
+  color: hsl(60, 100%, 50%);
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  width: 350px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin: 0 23rem; */
+  padding: 40px 0 20px 0;
+  background-color: rgba(23, 119, 175, 0.911);
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.headline {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.input-text {
+  max-width: 350px;
+  width: 90%;
+  padding: 0.5rem;
+  border: 1px solid #118ab2;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.input-text_inavlid {
+  border: 1px solid #d90429;
+}
+
+.button-submit {
+  display: block;
+  width: 150px;
+  margin: 15px 0;
+  padding: 0.5rem;
+  font-weight: bold;
+  font-size: large;
+  /* color: white; */
+  background: #0b4db1;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-submit:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.nav-container {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  font-size: 0.75rem;
+  align-self: flex-end;
+}
+
+.invalid-message {
+  color: #fcf807;
+  background-color: rgb(202, 38, 9);
+  font-size: 0.75rem;
+}
+
+input {
+  color: black;
+}

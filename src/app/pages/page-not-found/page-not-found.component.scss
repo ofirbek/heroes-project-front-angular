@@ -1,0 +1,27 @@
+.page-container {
+  height: 100vh;
+  width: 100vw;
+  /* z-index: 1001; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f8f8f8;
+  color: #767676;
+  font-weight: bold;
+}
+
+.circle {
+  height: 200px;
+  width: 200px;
+
+  margin: 5rem 0 10rem;
+  border-radius: 50%;
+  background-color: #767676;
+}
+
+.page-404 {
+  font-size: 6rem;
+}
