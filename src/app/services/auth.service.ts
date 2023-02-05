@@ -65,6 +65,7 @@ export class AuthService {
     }
     return false;
   }
+
   handleTokenExpiration(): void {
     if (!this.isAuthenticated()) this.logout();
   }

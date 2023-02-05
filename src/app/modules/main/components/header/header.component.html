@@ -1,0 +1,30 @@
+<div class="header-container">
+  <div class="header_nav">
+    <div class="flex-row logo-conteiner" routerLink="/home">
+      <div class="logo"></div>
+      <div class="flex-column">
+        <div class="font-size-20">HEROES</div>
+        <div class="font-size-13">PROJECT</div>
+      </div>
+    </div>
+    <!-- <img class="logo" src="../../../../../pictures/logos/logo.png" alt="" /> -->
+    <div>
+      <a
+        routerLink="/user-main/my-heroes"
+        *ngIf="isUserLogged"
+        routerLinkActive="none"
+        >My heroes</a
+      >
+      <a
+        routerLink="/user-main/heroes"
+        *ngIf="isUserLogged"
+        routerLinkActive="none"
+        >All heroes</a
+      >
+      <a *ngIf="isUserLogged" (click)="onClickLogout()">Logout</a>
+      <a routerLink="/login" *ngIf="!isUserLogged">Login</a>
+      <a routerLink="/game-Instructions" *ngIf="!isUserLogged">Instructions</a>
+      <a routerLink="/register" *ngIf="!isUserLogged">Register</a>
+    </div>
+  </div>
+</div>

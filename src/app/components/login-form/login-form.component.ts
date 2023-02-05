@@ -8,7 +8,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
-  styleUrls: ['./login-form.component.css'],
+  styleUrls: ['./login-form.component.scss'],
 })
 export class LoginFormComponent implements OnInit {
   loginForm!: FormGroup;
@@ -43,21 +43,18 @@ export class LoginFormComponent implements OnInit {
   }
   handleSubmit(): void {
     this.submitted = true;
-    const userName = this.loginForm.get('userName')?.value;
-    const password = this.loginForm.get('password')?.value;
-    const user = this.usersService.isUserExists(userName, password);
-    if (user != null) {
-      // this.authService.isLoggedIn.subscribe()
-      this.authService.login(user);
-      this.router.navigate(['/user-main/heroes']);
-    } else {
-      this.userNameTaken = true;
-    }
-
-    // this.router.navigate(["/user-main"]);
+    const userName: string = this.loginForm.get('userName')?.value;
+    const password: string = this.loginForm.get('password')?.value;
+    // this.authService.isLoggedIn.subscribe()
+    this.authService.login({ username: userName, password }).subscribe({
+      next: (res) => {
+        this.router.navigate(['/user-main/heroes']);
+      },
+      error: (error) => {
+        console.log(error);
+        this.router.navigate(['/user-main']);
+      },
+    });
+    //   this.userNameTaken = true;
   }
-
-  // handleSubmitV1(loginForm: NgForm) {
-  //   console.log(loginForm);
-  // }
 }

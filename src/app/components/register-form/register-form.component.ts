@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-register-form',
   templateUrl: './register-form.component.html',
-  styleUrls: ['./register-form.component.css'],
+  styleUrls: ['./register-form.component.scss'],
 })
 export class RegisterFormComponent implements OnInit {
   form!: FormGroup;
@@ -41,7 +41,7 @@ export class RegisterFormComponent implements OnInit {
 
   handleSubmit(): void {
     this.submitted = true;
-    this.userService.addUser(this.form.value);
+    // this.userService.addUser(this.form.value);
     this.router.navigate(['/login']);
     // if(isUserExists()){
     // this.userService.addUser(this.form.value);

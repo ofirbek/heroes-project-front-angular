@@ -1,0 +1,31 @@
+.header {
+  width: 100%;
+  height: 4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  /* background-image: url(../../../pictures/lior3.jpg.png); */
+}
+
+.footer {
+  display: block;
+  width: 100%;
+  height: 5rem;
+  background-color: #2b2b2b;
+}
+
+.main-container {
+  display: block;
+  width: 100%;
+  margin-top: 4rem;
+  padding: 15px 50px;
+  min-height: calc(100vh - 9rem);
+}
+.main {
+  color: white;
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  min-height: calc(100vh - 25rem);
+}

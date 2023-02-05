@@ -1,0 +1,52 @@
+.main-container {
+  color: white;
+  margin: 40px 10px;
+}
+.main {
+  height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.line1 {
+  font-size: 40px;
+  margin-left: 50px;
+}
+.line2 {
+  font-size: 30px;
+}
+.subscribe {
+  height: 80px;
+  width: 250px;
+  border-radius: 10px;
+  margin-left: 120px;
+  font-size: 25px;
+  font-weight: bold;
+
+  color: #f29a0d;
+  background-color: rgba(18, 115, 224, 0.918);
+  border: 1px solid brown;
+  transition: all 0.5s;
+}
+.subscribe:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: rgba(3, 91, 190, 0.918);
+}
+.img1 {
+  height: 100px;
+  width: 600px;
+  background-color: #f29a0d;
+}
+
+.img2 {
+  height: 100px;
+  width: 400px;
+  background-color: red;
+}
+.img3 {
+  height: 100px;
+  width: 200px;
+  background-color: purple;
+}

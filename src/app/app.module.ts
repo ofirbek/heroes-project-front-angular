@@ -4,26 +4,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { LoginFormComponent } from './components/login-form/login-form.component';
-import { HeroesComponent } from './components/heroes/heroes.component';
-import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
-import { RegisterFormComponent } from './components/register-form/register-form.component';
-import { GameInstructionsComponent } from './components/game-instructions/game-instructions.component';
-
+import { CoreModule } from './core/core.module';
+import { MainModule } from './modules/main/main.module';
+import { MainModuleComponent } from './modules/main/components/main-module/main-module.component';
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    LoginFormComponent,
-    HeroesComponent,
-    PageNotFoundComponent,
-    RegisterFormComponent,
-    GameInstructionsComponent,
-  ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, MainModule],
   providers: [],
   bootstrap: [AppComponent],
 })
